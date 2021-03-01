@@ -10,7 +10,7 @@ ENV FC_LANG en-US LC_CTYPE en_US.UTF-8
 
 # frontend dependencies
 COPY yarn.lock package.json .yarnrc ./
-RUN yarn install --frozen-lockfile
+RUN yarn install --production --frozen-lockfile
 #RUN npx pnpm install
 
 ###################
