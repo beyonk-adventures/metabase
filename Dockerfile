@@ -27,7 +27,7 @@ ENV FC_LANG en-US LC_CTYPE en_US.UTF-8
 # bash:    various shell scripts
 # curl:    needed by script that installs Clojure CLI
 
-RUN apk add --no-cache curl bash
+RUN apt-get update -yq && apt-get install -yq git curl bash
 
 # lein:    backend dependencies and building
 RUN curl https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -o /usr/local/bin/lein && \
