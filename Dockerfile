@@ -18,7 +18,7 @@ RUN yarn install --production --frozen-lockfile
 ###################
 
 # Build currently doesn't work on > Java 11 (i18n utils are busted) so build on 8 until we fix this
-FROM adoptopenjdk/openjdk8:alpine as backend
+FROM adoptopenjdk/openjdk8:nightly as backend
 
 WORKDIR /app/source
 
